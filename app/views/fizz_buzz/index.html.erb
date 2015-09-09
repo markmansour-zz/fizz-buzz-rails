@@ -2,6 +2,6 @@
 
 <ol>
 <% 31.times do %>
-  <li><%= @fb.next %></li>
+  <li><span class="<%= @fb.as_word == "FizzBuzz" ? "fa fa-rocket" : "" %>"> <%= @fb.next %></span></li>
 <% end %>
 </ol>

@@ -7,20 +7,27 @@ class FizzBuzz
   attr_writer :current
 
   def next
-    result = next_step
+    result = as_word
     @current += 1
     result
   end
 
-  def next_step
-    if(current % 3 == 0 && current % 5 == 0)
-      "FizzBuzz"
-    elsif current % 3 == 0
-      "Fizz"
-    elsif current % 5 == 0
-      "Buzz"
-    else
-      current
-    end
+  def as_word
+    return "FizzBuzz" if fizz_buzz?
+    return "Fizz" if fizz?
+    return "Buzz" if buzz?
+    current
+  end
+
+  def fizz_buzz?
+    fizz? && buzz?
+  end
+
+  def fizz?
+    current % 3 == 0
+  end
+
+  def buzz?
+    current % 5 == 0
   end
 end
