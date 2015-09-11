@@ -1,0 +1,14 @@
+
+
+## Create S3 bucket
+
+$ aws s3 mb s3://markmans-reinvent-demo/
+
+### Add a folder and turn on versioning
+
+s3://markmans-reinvent-demo/source
+
+Through the console, edit the properties and enable versioning.
+
+
+
