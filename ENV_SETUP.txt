@@ -11,4 +11,25 @@ s3://markmans-reinvent-demo/source
 Through the console, edit the properties and enable versioning.
 
 
+## Create a Pipeline
+
+1. Name
+* FizzBuzzRubyPipelineFromS3
+2. Provider:
+* S3
+* Location: s3://markmans-reinvent-demo/source/fizz-buzz.zip
+* Output Artifact #1: MyApp
+3. Build Provider: 
+* Jenkins
+* Project Name: fizz-buzz-rails
+* Input Artifact: MyApp
+* Output Artifact: MyAppBuild
+4. Beta
+Deploy
+Action name: fizz-buzz-rails
+Deployment Provider: Elastic Beanstalk
+Application Name: fizz-buzz-rails
+Environment Name: fizz-buzz
+Input Artifact #1: MyAppBuild
+
 
