@@ -6,3 +6,4 @@
 # Rails files
 tmp/
 *.log
+public/assets
