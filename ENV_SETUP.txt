@@ -33,3 +33,12 @@ Environment Name: fizz-buzz
 Input Artifact #1: MyAppBuild
 
 
+## Push an artifact to S3 after a 'git push'
+
+Create an alias that does a git push and then copies the zip to S3
+
+Add these lines to the end of .git/config
+
+[alias]
+        xpush = !git push origin master && bin/cp-to-s3
+
