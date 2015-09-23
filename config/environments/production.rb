@@ -63,7 +63,16 @@ Rails.application.configure do
   # config.action_controller.asset_host = "//s3.amazonaws.com/markmans-reinvent-demo-assets"
   config.action_controller.asset_host = "//#{ENV['ASSET_HOST']}"
 
-  config.font_assets.origin = '*' 
+  config.middleware.insert_before 0, "Rack::Cors", :debug => true, :logger => (-> { Rails.logger }) do
+    allow do
+      origins '*'
+      
+      resource '*',
+        :headers => :any,
+        :methods => [:get, :post, :delete, :put, :options, :head],
+        :max_age => 0
+    end
+  end
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
