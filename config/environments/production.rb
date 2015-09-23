@@ -65,7 +65,7 @@ Rails.application.configure do
 
   config.middleware.insert_before 0, "Rack::Cors" do
     allow do
-      origins "*"
+      origins "http://fizzbuzzapp-env.elasticbeanstalk.com"
 #      origins "http://d3v28jtwylrgla.cloudfront.net"
 #      origins ENV['ASSET_HOST']
       resource "*", :headers => :any, :methods => [:get, :options]
