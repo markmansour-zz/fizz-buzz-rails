@@ -6,6 +6,6 @@
 
 <ol>
 <% 16.times do %>
-  <li><%= @fb.as_word == "FizzBuzz" ? content_tag(:span, class: "fa fa-amazon") : "" -%><%= @fb.next %></li>
+  <li><%= @fb.as_word == "FizzBuzz" ? tag(:span, class: "fa fa-amazon") : "" -%><%= @fb.next %></li>
 <% end %>
 </ol>
