@@ -1,9 +1,9 @@
 <h1>Continuously Deploy with AWS CodePipeline</h1>
 
-<table class="table table-striped table-hover ">
+<table class="table table-striped table-hover h3">
   <thead>
     <tr>
-      <th>Number</th>
+      <th>Count</th>
       <th>What to say</th>
     </tr>
   </thead>
@@ -14,21 +14,18 @@
 	<%= i -%>
       </td>
       <td>
-	<%= @fb.current %>
-
 	<% if @fb.fizz_buzz? %>
 	<span class="label label-success">FizzBuzz</span>
 	<% elsif @fb.fizz? %>
 	<span class="label label-primary">Fizz</span>
 	<% elsif @fb.buzz? %>
 	<span class="label label-info">Buzz</span>
+	<% else %>
+	<%= @fb.current %>
 	<% end %>
       </td>
-      <%= @fb.next %>  
     </tr>
+    <% @fb.next %>  
     <% end %>
   </tbody>
 </table>
-
-  <li></li>
-</ol>
