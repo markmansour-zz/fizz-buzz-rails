@@ -1,11 +1,22 @@
 <h1>Continuously Deploy with AWS CodePipeline</h1>
 
-<span class="fa fa-amazon"></span>
+<table class="table table-striped table-hover ">
+  <tbody>
+    <% 1.upto.16 do |i| %>
+    <td>
+      <%= i -%>
+    </td>
+    <td>
+      <% if @fb.as_word == "FizzBuzz" %>
+      <span class="label label-success">FizzBuzz</span>
+      <% else %>
+      <%= @fb.current %>
+      <% end %>
+    </td>
+    <%= @fb.next %>  
+    <% end %>
+  </tbody>
+</table>
 
-<span class ="fa fa-rocket"></span>
-
-<ol>
-<% 16.times do %>
-  <li><%= @fb.as_word == "FizzBuzz" ? tag(:span, class: "fa fa-amazon") : "" -%><%= @fb.next %></li>
-<% end %>
+  <li></li>
 </ol>
