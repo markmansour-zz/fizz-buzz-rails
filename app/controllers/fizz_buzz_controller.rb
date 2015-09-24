@@ -1,6 +1,10 @@
 class FizzBuzzController < ApplicationController
   before_filter :set_headers
 
+  def index
+    @fb = FizzBuzz.new
+  end
+
   private
 
   def set_headers
@@ -16,7 +20,4 @@ class FizzBuzzController < ApplicationController
     end
   end
 
-  def index
-    @fb = FizzBuzz.new
-  end
 end
