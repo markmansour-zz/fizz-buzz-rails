@@ -2,8 +2,10 @@
 
 <span class="fa fa-amazon"></span>
 
+<%= content_tag(:span, :class => "fa fa-rocket") %>
+
 <ol>
 <% 16.times do %>
-  <li><%= @fb.as_word == "FizzBuzz" ? "<span class='fa fa-amazon'></span>" : "" -%><%= @fb.next %></li>
+  <li><%= @fb.as_word == "FizzBuzz" ? content_tag(:span, :class => "fa fa-amazon") : "" -%><%= @fb.next %></li>
 <% end %>
 </ol>
