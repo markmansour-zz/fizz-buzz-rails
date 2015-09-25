@@ -61,7 +61,7 @@ Rails.application.configure do
   # config.action_controller.asset_host = 'http://assets.example.com'
   # config.action_controller.asset_host = "//s3.amazonaws.com/#{ENV['S3_ASSET_BUCKET']}"  # may not work
   # config.action_controller.asset_host = "//s3.amazonaws.com/markmans-reinvent-demo-assets"
-  # config.action_controller.asset_host = "//#{ENV['ASSET_HOST']}"
+  config.action_controller.asset_host = "//#{ENV['ASSET_HOST']}"
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
