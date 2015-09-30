@@ -19,15 +19,15 @@ class FizzBuzz
     current
   end
 
-  def fizz_buzz?
-    fizz? && buzz?
-  end
-
   def fizz?
     current % 3 == 0
   end
 
   def buzz?
     current % 5 == 0
+  end
+
+  def fizz_buzz?
+    fizz? && buzz?
   end
 end
